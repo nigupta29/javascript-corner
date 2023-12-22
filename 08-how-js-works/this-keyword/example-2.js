@@ -1,9 +1,15 @@
-var lastName = 'Doe'
-
-const person = {
-  firstName: 'John',
-  age: 23,
-  greet: () => console.log(`Hi! Mr. ${this.lastName}`),
+const jonas = {
+  year: 1990,
+  calcAge: function () {
+    console.log(this)
+    console.log(`Your age :: ${2023 - this.year}`)
+  },
 }
 
-person.greet()
+const matilda = {
+  year: 1991,
+}
+jonas.calcAge() // this will point to Jonas
+
+matilda.calcAge = jonas.calcAge
+matilda.calcAge() // this will point to matilda
