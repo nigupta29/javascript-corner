@@ -1,7 +1,10 @@
 {
-  "name": "node-starter",
+  "name": "javascript-corner",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "nodemon": "^3.0.2"
   }
 }
